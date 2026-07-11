@@ -1,0 +1,77 @@
+aid: customink-api
+url: https://raw.githubusercontent.com/api-evangelist/customink-api/refs/heads/main/apis.yml
+name: Custom Ink
+kind: company
+description: >-
+  Custom Ink is a direct-to-consumer custom apparel and promotional products
+  company that lets groups design and order custom t-shirts, hoodies, hats,
+  drinkware, bags, and other branded merchandise through an online Design Lab,
+  instant price quotes, and full-service order fulfillment. As of the review
+  date Custom Ink does not publish a public or partner developer API - there is
+  no documented, self-serve programmatic surface for products, designs, quotes,
+  or orders. An internal API host (api.customink.com) backs Custom Ink's own web
+  and mobile storefront but is private and undocumented, secured behind AWS API
+  Gateway and Cognito. Partnerships are handled as commercial/business
+  relationships rather than technical developer integrations. This entry is a
+  gated stub - the logical APIs below are honestly MODELED from Custom Ink's
+  public product surface, not sourced from published API documentation, and no
+  endpoints are fabricated as if real.
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+tags:
+- Custom Apparel
+- T-Shirts
+- Print on Demand
+- Promotional Products
+- eCommerce
+- Design
+- No Public API
+created: '2026-07-11'
+modified: '2026-07-11'
+specificationVersion: '0.19'
+apis:
+- aid: customink-api:customink-api-storefront-api
+  name: Custom Ink Storefront API (Modeled)
+  tags:
+  - Products
+  - Design
+  - Quotes
+  - Orders
+  - Modeled
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+  humanURL: https://www.customink.com/
+  endpointsModeled: true
+  properties:
+  - url: https://www.customink.com/
+    type: Website
+  - url: https://www.customink.com/about/partners
+    type: Partners
+  - url: https://www.customink.com/help_center
+    type: Documentation
+  description: >-
+    A single, honestly MODELED logical surface representing what a Custom Ink
+    developer API could cover - a Products catalog (garment styles, colors,
+    sizes), a Design capability (Design Lab artwork placement and previews),
+    Quotes (instant price by product, ink colors, and quantity), and Orders
+    (submission and status tracking). This is NOT a documented public API.
+    Custom Ink exposes no public or partner developer API for these functions as
+    of the review date; endpointsModeled is true and no concrete endpoints are
+    claimed. The internal api.customink.com host that powers Custom Ink's own
+    apps is private, undocumented, and out of scope for third-party use.
+common:
+- type: Website
+  url: https://www.customink.com/
+- type: LinkedIn
+  url: https://www.linkedin.com/company/customink
+- type: GitHubOrganization
+  url: https://github.com/customink
+- type: Documentation
+  url: https://www.customink.com/help_center
+- type: Partners
+  url: https://www.customink.com/about/partners
+- type: Pricing
+  url: https://www.customink.com/help_center/get-a-price-quote
+- type: Blog
+  url: https://technology.customink.com/
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com

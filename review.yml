@@ -1,0 +1,98 @@
+aid: customink-api
+name: Custom Ink
+review:
+  question: Does Custom Ink expose a documented public WebSocket API?
+  answer: false
+  date: '2026-07-11'
+  reviewer: API Evangelist
+  asyncapiSpecCreated: false
+  asyncapiScopeNote: |
+    No AsyncAPI document was authored. Custom Ink publishes no documented public
+    or partner API of any kind - REST or otherwise - so there is no server-push
+    transport (WebSocket or SSE) on any Custom Ink public API to model. The
+    api.customink.com host that backs Custom Ink's own storefront is private and
+    undocumented; its transport is not published and is out of scope.
+findings:
+  summary: |
+    Custom Ink does not publish a documented public WebSocket API - nor any
+    documented public or partner developer API at all. Custom Ink is a
+    direct-to-consumer (DTC) custom apparel and promotional products company
+    (customink.com). Customers design merchandise in an online Design Lab, get
+    instant price quotes, and place orders through the website; there is no
+    self-serve programmatic surface for products, designs, quotes, or orders.
+    An internal API host, api.customink.com, powers Custom Ink's own web and
+    mobile apps and is secured behind AWS API Gateway and Amazon Cognito
+    (documented on Custom Ink's own engineering blog), but it is private,
+    undocumented, and not offered to third-party developers. Custom Ink's
+    "partners" program is a commercial/business relationship (colleges, brands,
+    licensing, artwork/fonts), not a technical developer integration. No public,
+    documented WebSocket (ws:// or wss://) endpoint exists.
+  publicApi: |
+    None. As of the review date there is no developer portal, no published API
+    reference, no OpenAPI description, no SDK, and no partner API documentation
+    for Custom Ink's products, design, quoting, or order functions. The catalog
+    entry is a gated stub: the single API listed in apis.yml is explicitly
+    MODELED (endpointsModeled: true) from Custom Ink's public product surface and
+    contains no fabricated endpoints.
+  openSource: |
+    Custom Ink maintains a public GitHub organization (github.com/customink), but
+    it publishes internal Ruby/Rails infrastructure and developer tooling
+    (e.g. secondbase, central_logger, strainer, stoplight, vertex_client) rather
+    than any client, SDK, or documentation for a customer-facing products/design/
+    quotes/orders API. None of these repositories constitute a public Custom Ink
+    product API.
+  pricing: |
+    Custom Ink pricing is an all-inclusive, per-order model determined by three
+    factors - the product selected, the number of ink colors, and the total order
+    quantity - with volume discounts and free setup/design review/shipping (48 US
+    states, APO, Canada). Quotes are obtained interactively via the Design Lab "$"
+    button, the quick-quote tool, or customer service. There is no programmatic
+    (API) quote or pricing access, and no published API price plans or metered
+    per-call rates - so no plans/, rate-limits/, or finops/ artifacts were created.
+  transports:
+    - protocol: REST
+      scheme: https
+      baseURL: https://api.customink.com
+      documented: false
+      note: Private internal backend for Custom Ink's own storefront (AWS API Gateway + Cognito). Not publicly documented and not offered to third parties.
+    - protocol: WebSocket
+      scheme: wss
+      documented: false
+      note: No WebSocket endpoint is documented anywhere in Custom Ink's public materials as of the review date.
+  endpointsConfirmedRest: []
+  endpointsModeled:
+    note: |
+      The following are LOGICAL capability groupings modeled from Custom Ink's
+      public product surface for cataloging purposes only. They are NOT real,
+      documented, or callable endpoints, and no paths, hosts, or parameters are
+      claimed as fact.
+    surfaces:
+      - Products - garment styles, colors, and sizes available in the catalog.
+      - Design - Design Lab artwork upload, placement, and preview rendering.
+      - Quotes - instant price by product, ink-color count, and order quantity.
+      - Orders - order submission, proof approval, and fulfillment/status tracking.
+sources:
+  - url: https://www.customink.com/
+    type: Website
+    note: Consumer DTC storefront; Design Lab, instant quotes, order fulfillment. No developer/API links.
+  - url: https://www.customink.com/about/partners
+    type: Partners
+    note: Partnership program is commercial/business (colleges, brands, licensing, artwork), not a technical API integration.
+  - url: https://www.customink.com/help_center/get-a-price-quote
+    type: Documentation
+    note: Per-order pricing by product, ink colors, and quantity; interactive quote tools only, no API.
+  - url: https://github.com/customink
+    type: SourceCode
+    note: Public org publishes internal Rails infra/tooling, not a customer-facing product API or SDK.
+  - url: https://technology.customink.com/
+    type: Blog
+    note: Custom Ink engineering blog; documents internal api.customink.com behind AWS API Gateway + Cognito (private, undocumented).
+actions:
+  asyncapiPath: null
+  apisYmlUpdated: true
+  reason: |
+    No WebSocket protocol surface exists, and Custom Ink exposes no documented
+    public or partner API at all. The apis.yml entry is a gated stub with a
+    single explicitly MODELED API (endpointsModeled: true) and no fabricated
+    endpoints. No AsyncAPI document was created because there is no public
+    server-push transport - or any public API - on Custom Ink to model.
