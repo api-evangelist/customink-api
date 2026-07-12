@@ -58,6 +58,10 @@ apis:
     claimed. The internal api.customink.com host that powers Custom Ink's own
     apps is private, undocumented, and out of scope for third-party use.
 common:
+- type: VulnerabilityDisclosure
+  url: security/customink-api-vulnerability-disclosure.yml
+- type: DomainSecurity
+  url: security/customink-api-domain-security.yml
 - type: Website
   url: https://www.customink.com/
 - type: LinkedIn
