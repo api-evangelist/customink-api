@@ -25,18 +25,6 @@ Because there is no documented public API, this catalog entry is a **stub**. The
 
 ## APIs
 
-### Custom Ink Storefront API (Modeled)
-
-A single, honestly **modeled** logical surface representing what a Custom Ink developer API could cover:
-
-- **Products** — garment styles, colors, and sizes available in the catalog.
-- **Design** — Design Lab artwork upload, placement, and preview rendering.
-- **Quotes** — instant price by product, ink-color count, and order quantity.
-- **Orders** — order submission, proof approval, and fulfillment/status tracking.
-
-This is **not** a documented public API. `endpointsModeled` is `true`; no concrete endpoints are claimed. The internal `api.customink.com` host that powers Custom Ink's own apps is private, undocumented, and out of scope for third-party use.
-
-- **Human URL:** [https://www.customink.com/](https://www.customink.com/)
 
 ## Pricing
 
