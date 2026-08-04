@@ -1,0 +1,21 @@
+{
+  "repo": "customink-api",
+  "feeds": [
+    {
+      "source": "https://www.customink.com/reviews/feed.rss",
+      "feed_url": "https://www.customink.com/reviews/feed.rss",
+      "title": "",
+      "saved": 3,
+      "method": "feed"
+    },
+    {
+      "source": "https://www.customink.com/help_center/get-a-price-quote",
+      "feed_url": "https://www.customink.com/reviews/feed.rss",
+      "title": "",
+      "saved": 0,
+      "method": "discovered"
+    }
+  ],
+  "post_count": 33,
+  "fetched": "2026-08-01T15:49:00Z"
+}
