@@ -1,4 +1,4 @@
-# Custom Ink (customink-api)
+# Custom Ink
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -64,47 +64,84 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Custom Ink is a direct-to-consumer (DTC) custom apparel and promotional products company. Groups design and order custom t-shirts, hoodies, hats, drinkware, bags, and other branded merchandise through an online Design Lab, get instant price quotes, and place orders with full-service fulfillment at [customink.com](https://www.customink.com/).
+Custom Ink is a direct-to-consumer custom apparel and promotional products company that lets groups design and order custom t-shirts, hoodies, hats, drinkware, bags, and other branded merchandise through an online Design Lab, instant price quotes, and full-service order fulfillment. As of the review date Custom Ink does not publish a public or partner developer API - there is no documented, self-serve programmatic surface for products, designs, quotes, or orders. An internal API host (api.customink.com) backs Custom Ink's own web and mobile storefront but is private and undocumented, secured behind AWS API Gateway and Cognito. Partnerships are handled as commercial/business relationships rather than technical developer integrations. This entry is a gated stub - the logical APIs below are honestly MODELED from Custom Ink's public product surface, not sourced from published API documentation, and no endpoints are fabricated as if real.
 
-> **Access model — honest, gated stub.** As of the review date (2026-07-11), Custom Ink does **not** publish a public or partner developer API. There is no developer portal, no published API reference, no OpenAPI description, no SDK, and no partner API documentation for products, designs, quotes, or orders. An internal API host, `api.customink.com`, backs Custom Ink's own web and mobile storefront and is secured behind AWS API Gateway and Amazon Cognito (documented on Custom Ink's own engineering blog), but it is **private, undocumented, and not offered to third-party developers**. Custom Ink's "partners" program is a commercial/business relationship (colleges, brands, licensing, artwork/fonts), not a technical developer integration.
+**Areas:** Custom Apparel · T-Shirts · Print on Demand · Promotional Products · E-Commerce · Design
 
-Because there is no documented public API, this catalog entry is a **stub**. The single API listed in `apis.yml` is explicitly **modeled** (`endpointsModeled: true`) from Custom Ink's public product surface — it is a set of logical capability groupings for cataloging purposes only and contains **no fabricated endpoints**. No `openapi/`, `plans/`, `rate-limits/`, `finops/`, or `collections/` artifacts were created, because no sourced API surface, price plans, or metered rates exist to document.
+## Custom Ink on APIs.io
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/customink-api/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/customink-api/refs/heads/main/apis.yml)
+Everything profiled for Custom Ink is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/customink-api/](https://apis.io/providers/customink-api/)** — or go straight to one of the APIs or properties below.
 
-## Tags
+### Published properties
 
-- Custom Apparel
-- T-Shirts
-- Print on Demand
-- Promotional Products
-- eCommerce
-- Design
-- No Public API
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## Timestamps
+#### Security (2)
 
-- **Created:** 2026-07-11
-- **Modified:** 2026-07-11
+Authentication, trust centre, and vulnerability disclosure.
 
-## APIs
+- [Customink Api Domain Security](https://apis.io/security/customink-api/customink-api-domain-security/)
+- [Customink Api Vulnerability Disclosure](https://apis.io/security/customink-api/customink-api-vulnerability-disclosure/)
 
+## Where to find this API
 
-## Pricing
-
-Custom Ink pricing is an all-inclusive, **per-order** model determined by three factors — the product selected, the number of ink colors, and the total order quantity — with volume discounts and free setup, design review, and shipping (48 US states, APO, and Canada). Quotes are obtained interactively via the Design Lab "$" button, the quick-quote tool, or customer service. There is **no** programmatic (API) quote or pricing access and no published API price plans. See [Get a Price Quote](https://www.customink.com/help_center/get-a-price-quote).
-
-## Common Properties
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
 - [Website](https://www.customink.com/)
-- [LinkedIn](https://www.linkedin.com/company/customink)
-- [GitHub Organization](https://github.com/customink)
-- [Documentation (Help Center)](https://www.customink.com/help_center)
-- [Partners](https://www.customink.com/about/partners)
+- [Documentation](https://www.customink.com/help_center)
 - [Pricing](https://www.customink.com/help_center/get-a-price-quote)
-- [Blog (Engineering)](https://technology.customink.com/)
+- [Blog](https://technology.customink.com/)
+- [GitHub](https://github.com/customink)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Kin Score 8.9** — minimal · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 48.2 |
+| Contract quality | 0.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 2.6 |
+| Developer ergonomics | 10.7 |
+| Access clarity | 10.5 |
+
+**Agent readiness 0.0** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 11.8** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/customink-api/](https://apis.io/providers/customink-api/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Custom Ink: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/customink-api/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
